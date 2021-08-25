@@ -26,8 +26,7 @@
     "test": "react-scripts test",
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky install",
-    "install": "npm i | husky prepare"
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
