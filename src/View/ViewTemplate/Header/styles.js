@@ -6,23 +6,21 @@ export const StyledHeaderWrapper = styled.header`
 
   margin: 0;
   margin-top: 32px;
-  min-height: 8px;
-  box-sizing: border-box;
 
   background-color: #ccc5b9;
 `;
 
 export const StyledHeaderTitle = styled.h1`
-  font-family: "montserratextrabold";
-  font-weight: 800 !important;
-  color: #403d39;
+  color: ${(props) => props.theme.typography.bodyCopyColor};
+  font-family: ${(props) => props.theme.typography.headings.fontFamily};
+  font-weight: ${(props) => props.theme.typography.headings.fontWeight};
   margin: 0;
 `;
 
 export const StyledSlogan = styled.span`
-  font-family: "montserratthin";
-  font-weight: 100 !important;
-  color: #403d39;
+  color: ${(props) => props.theme.typography.bodyCopyColor};
+  font-family: ${(props) => props.theme.typography.body.fontFamily};
+  font-weight: ${(props) => props.theme.typography.headings.fontWeight};
   margin: 0;
 `;
 
