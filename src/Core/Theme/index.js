@@ -1,21 +1,22 @@
 export const Theme = {
   colors: {
-    primary: "#3d5a80",
-    secondary: "#98c1d9",
-    success: "#4ecdc4",
-    danger: "#ee6c4d",
-    warning: "#fcca46",
+    primary: "#CFFFB3",
+    secondary: "#63a611",
+    accent: "#62929e",
+    background: "#f7fff7",
+    text: "#424242",
+    mutedText: "#858585",
+    success: "#badd7e",
+    warning: "#fff75c",
+    danger: "#e03616",
   },
   typography: {
-    bodyCopyColor: "#403d39",
     headings: {
       fontFamily: "montserratextrabold",
       h1: { fontSize: "32px", fontWeight: "800" },
     },
     body: {
       fontFamily: "montserratthin",
-      color: "#403d39",
-      backgroundColor: "#ccc5b9",
       regular: { fontSize: "14px" },
       large: { fontSize: "18px" },
     },
