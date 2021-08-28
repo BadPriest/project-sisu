@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const SectionTitle = styled.h1`
-  font-family: "montserratextrabold";
-  font-weight: 800 !important;
-  color: ${(props) => props.theme.typography.bodyCopyColor};
+  color: ${(props) => props.theme.colors.text};
+  font-family: ${(props) => props.theme.typography.headings.fontFamily};
+  font-weight: ${(props) => props.theme.typography.headings.h1.fontWeight};
 `;
 
 export default SectionTitle;

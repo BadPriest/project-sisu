@@ -5,6 +5,8 @@ export const StyledTemplateWrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
 
+  background-color: ${(props) => props.theme.colors.background};
+
   & > * {
     flex: 1 auto;
   }
