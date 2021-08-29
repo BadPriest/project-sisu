@@ -1,12 +1,24 @@
 import * as React from "react";
+
 import { SectionTitle } from "../Shared/SectionTitle";
+import { Separator } from "../Shared/Separator";
 
-import { StyledWrapper } from "./styles";
+import { useProjectSavings } from "./Hooks";
 
-export const ProjectSavings = () => (
-  <StyledWrapper>
-    <SectionTitle>Project Savings Data</SectionTitle>
-  </StyledWrapper>
-);
+import { StyledWrapper, StyledContentWrapper } from "./styles";
+
+export const ProjectSavings = () => {
+  const { projects } = useProjectSavings();
+
+  return (
+    <StyledWrapper>
+      <SectionTitle>Project Savings Data</SectionTitle>
+      <Separator />
+      <StyledContentWrapper>
+        {JSON.stringify(projects, null, 4)}
+      </StyledContentWrapper>
+    </StyledWrapper>
+  );
+};
 
 export default ProjectSavings;

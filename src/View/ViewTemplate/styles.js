@@ -14,10 +14,5 @@ export const StyledTemplateWrapper = styled.div`
 
 export const StyledContentWrapper = styled.section`
   flex: 100 auto;
-
-  & > * {
-    /* background-color: lightseagreen; */
-  }
-
-  /* background-color: lightblue; */
+  max-width: 100vw;
 `;

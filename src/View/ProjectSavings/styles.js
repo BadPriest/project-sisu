@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Container } from "../Shared/Container";
 
-export const StyledWrapper = styled(Container)`
-  min-height: 100%;
-  min-width: 100%;
-`;
+export const StyledWrapper = styled(Container)``;
+
+export const StyledContentWrapper = styled.main``;
 
 export default StyledWrapper;
