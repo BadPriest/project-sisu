@@ -2,8 +2,8 @@ import moment from "moment";
 
 export const parseDateForDisplay = (
   date,
-  formatsAre = ["YYYY-MM-DD"],
+  formatsAre = [moment.ISO_8601],
   formatTo = "DD.MM.YYYY"
-) => (date ? moment(date, [...formatsAre]).format(formatTo) : "--");
+) => (date ? moment.utc(date, [...formatsAre]).format(formatTo) : "--");
 
 export default parseDateForDisplay;
