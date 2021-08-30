@@ -4,14 +4,14 @@ export const parseNonStandardPropCasing = (prop) => {
   const hasSpaceThenLowercaseChar = /\s(\D)/g;
   const matches = prop.match(hasSpaceThenLowercaseChar);
 
-  let finalProp = prop;
+  let finalProp = String(prop);
 
   matches?.forEach((match) => {
     const upperCasedMatch = match.toUpperCase().trim();
-    finalProp = prop.replace(match, upperCasedMatch);
+    finalProp = finalProp.replace(match, upperCasedMatch);
   });
 
-  return finalProp;
+  return String(finalProp);
 };
 
 export const parseNullableProp = (obj, prop, defaultValue = "") => {
