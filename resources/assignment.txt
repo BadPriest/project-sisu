@@ -1,0 +1,37 @@
+Programming assignment: Frontend app
+====================================
+
+Dear Developer Candidate!
+
+The assignment instructions: 
+Write a modern client-side web application that fetches savings project data from https://sievo-react-assignment.azurewebsites.net/api/data
+and displays that data on web page (grid).
+
+We prefer to review React applications, however other modern JavaScript frameworks are accepted too.
+
+The Requirements:
+- Web page should look nice also with smaller resolutions (min width 650px)
+If the value is too long to fit the cell, cut it instead of splitting to several rows
+- User should be able to sort by start date.
+- User should be able to search by description. E.g. if "Kryptonite" is written to search box, only rows
+that contain text "Kryptonite" in descrption should be visible. Search text should be case insensitive.
+- Display dates in format dd.mm.yyyy
+- Null values (including the string "NULL") are displayed as empty cells
+- Please use modern JavaScript. At least ES6.
+- You can use any JavaScript library that you find suitable.
+
+Please think about this assignment as a real project. Feel free to use any tools of
+libraries you would on the job. The goal is to demonstrate, what kind of code you
+write for a living and see that you share our enthusiasm for code quality.
+We value maintainability, elegance and clarity over individual presentations excellence.
+
+The end result of the assignment must contain source code for
+the application and unit tests.
+
+If you are unable to finish the whole assignment then write down the problems you
+ran into so that we can discuss about them.
+
+Deliver the source code as a link to a zip archive in some file-sharing service (e.g. Google Drive, OneDrive, iCloud etc.)
+Please don't use other compression formats than zip and don't encrypt the archive with a password.
+
+Please do not post the code in a public repository on GitHub, GitLab or such.
