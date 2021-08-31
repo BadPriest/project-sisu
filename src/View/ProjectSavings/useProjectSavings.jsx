@@ -2,7 +2,7 @@ import * as React from "react";
 
 import useFetch from "use-http";
 import { normalizeProjects } from "./normalizeProjectSavings";
-import { ENDPOINTS, getFullApiUrl } from "../../../Core/Api/endpoints";
+import { ENDPOINTS, getFullApiUrl } from "../../Core/Api/endpoints";
 
 export const useProjectSavings = () => {
   const url = getFullApiUrl(ENDPOINTS.PROJECT_SAVINGS);

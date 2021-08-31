@@ -1,8 +1,8 @@
 import {
   parseNonStandardPropCasing,
   parseNullableProp,
-} from "../../../Utils/dataNormalizer";
-import { parseDateForDisplay } from "../../../Utils/parseDates";
+} from "../../Utils/dataNormalizer";
+import { parseDateForDisplay } from "../../Utils/parseDates";
 
 const normalizeStartDate = (rawProject) => ({
   ...rawProject,

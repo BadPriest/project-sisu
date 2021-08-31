@@ -3,7 +3,7 @@ import * as React from "react";
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
 
-import { useProjectSavings } from "./Hooks";
+import { useProjectSavings } from "./useProjectSavings";
 
 import { StyledWrapper, StyledContentWrapper } from "./styles";
 
