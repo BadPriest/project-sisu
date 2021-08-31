@@ -1,10 +1,10 @@
 import * as React from "react";
 
 import useFetch from "use-http";
-import { normalizeProjects } from "./normalizeProjectSavings";
+import { normalizeProjectSavingsData } from "./normalizeProjectSavingsData";
 import { ENDPOINTS, getFullApiUrl } from "../../Core/Api/endpoints";
 
-export const useProjectSavings = () => {
+export const useProjectSavingsData = () => {
   const url = getFullApiUrl(ENDPOINTS.PROJECT_SAVINGS);
   const [projects, setProjects] = React.useState();
 
@@ -14,7 +14,7 @@ export const useProjectSavings = () => {
 
   React.useEffect(() => {
     if (data) {
-      setProjects(normalizeProjects(data));
+      setProjects(normalizeProjectSavingsData(data));
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -31,4 +31,4 @@ export const useProjectSavings = () => {
   return { projects, loading, error };
 };
 
-export default useProjectSavings;
+export default useProjectSavingsData;

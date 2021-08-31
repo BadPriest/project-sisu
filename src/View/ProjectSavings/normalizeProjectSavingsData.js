@@ -20,7 +20,7 @@ const deepNormalize = (obj) => {
   return normalized;
 };
 
-export const normalizeProjects = (rawProjects) => {
+export const normalizeProjectSavingsData = (rawProjects) => {
   const result = rawProjects.map((rawProject) => {
     let normalizedObj = { ...rawProject };
 
@@ -33,4 +33,4 @@ export const normalizeProjects = (rawProjects) => {
   return result;
 };
 
-export default normalizeProjects;
+export default normalizeProjectSavingsData;

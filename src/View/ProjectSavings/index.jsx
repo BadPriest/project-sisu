@@ -3,12 +3,12 @@ import * as React from "react";
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
 
-import { useProjectSavings } from "./useProjectSavings";
+import { useProjectSavingsData } from "./useProjectSavingsData";
 
 import { StyledWrapper, StyledContentWrapper } from "./styles";
 
 export const ProjectSavings = () => {
-  const { projects } = useProjectSavings();
+  const { projects } = useProjectSavingsData();
 
   return (
     <StyledWrapper>
