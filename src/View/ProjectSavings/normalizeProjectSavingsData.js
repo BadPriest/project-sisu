@@ -21,12 +21,16 @@ const deepNormalize = (obj) => {
 };
 
 export const normalizeProjectSavingsData = (rawProjects) => {
+  let counterId = 0;
+
   const result = rawProjects.map((rawProject) => {
     let normalizedObj = { ...rawProject };
 
     normalizedObj = deepNormalize(normalizedObj);
     normalizedObj = normalizeStartDate(normalizedObj);
+    normalizedObj = { ...normalizedObj, reactKeyProp: counterId };
 
+    counterId += 1;
     return normalizedObj;
   });
 
