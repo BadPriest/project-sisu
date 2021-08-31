@@ -4,6 +4,7 @@ import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
 
 import { useProjectSavingsData } from "./useProjectSavingsData";
+import { ListProjects } from "./ListProjects";
 
 import { StyledWrapper, StyledContentWrapper } from "./styles";
 
@@ -15,7 +16,7 @@ export const ProjectSavings = () => {
       <SectionTitle>Project Savings Data</SectionTitle>
       <Separator />
       <StyledContentWrapper>
-        {JSON.stringify(projects, null, 4)}
+        <ListProjects projects={projects} />
       </StyledContentWrapper>
     </StyledWrapper>
   );
