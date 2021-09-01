@@ -13,6 +13,7 @@ export const StyledListWrapper = styled.section`
 
 export const StyledCard = styled.article`
   background-color: ${(props) => props.theme.colors.accent};
+  color: ${(props) => props.theme.colors.background};
 
   /* background-image: linear-gradient(
     41deg,
@@ -27,6 +28,7 @@ export const StyledCard = styled.article`
   background-size: 7.62px 6.63px; */
 
   & > p {
+    color: inherit;
     /* color: ${(props) => props.theme.colors.background}; */
   }
 `;
