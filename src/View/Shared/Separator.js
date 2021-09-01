@@ -7,7 +7,7 @@ export const Separator = styled.div`
 `;
 
 Separator.propTypes = {
-  height: PropTypes.number,
+  height: PropTypes.string,
 };
 
 export default Separator;
