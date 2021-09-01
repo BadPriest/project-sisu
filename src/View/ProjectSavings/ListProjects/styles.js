@@ -9,17 +9,9 @@ export const StyledListWrapper = styled.section`
   & > * {
     flex: 0 1 24%;
   }
-
-  max-width: 100vw;
-  max-height: 100vh;
 `;
 
 export const StyledCard = styled.article`
-  /* min-width: 12em;
-  min-height: 14em;
-  max-width: 12em;
-  max-height: 14em; */
-
   background-color: ${(props) => props.theme.colors.accent};
 
   /* background-image: linear-gradient(

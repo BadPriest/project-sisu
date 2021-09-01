@@ -3,7 +3,8 @@ import { ThemeProvider } from "styled-components";
 
 import { Theme } from "./Theme";
 import { ViewTemplate } from "../View/ViewTemplate";
-import { Home } from "../View/Home";
+
+import { ProjectSavings } from "../View/ProjectSavings";
 
 import { StyledAppWrapper } from "./styles";
 
@@ -13,7 +14,7 @@ function App() {
       <ThemeProvider theme={Theme}>
         <ViewTemplate>
           <Suspense fallback={<>Loading...</>}>
-            <Home />
+            <ProjectSavings />
           </Suspense>
         </ViewTemplate>
       </ThemeProvider>
