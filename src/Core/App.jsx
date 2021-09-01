@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 
 import { Theme } from "./Theme";
-import { ViewTemplate } from "../View/ViewTemplate";
+import { ViewTemplate } from "./ViewTemplate";
 
 import { ProjectSavings } from "../View/ProjectSavings";
 

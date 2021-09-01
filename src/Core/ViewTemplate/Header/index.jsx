@@ -5,8 +5,13 @@ import { StyledHeaderWrapper, StyledHeaderTitle, StyledSlogan } from "./styles";
 export const Header = () => (
   <StyledHeaderWrapper>
     <StyledHeaderTitle>
-      Project Sisu
-      <StyledSlogan>{` | `}be excellent.</StyledSlogan>
+      SIEVO Assignment
+      <StyledSlogan>
+        {` `}project sisu{` | `}
+      </StyledSlogan>
+      <StyledSlogan>
+        <i>be excellent.</i>
+      </StyledSlogan>
     </StyledHeaderTitle>
   </StyledHeaderWrapper>
 );
