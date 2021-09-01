@@ -16,5 +16,8 @@
       "fragment": "Fragment",
       "version": "detect"
     }
+  },
+  "rules": {
+    "react/jsx-props-no-spreading": ["warn", { "custom": "ignore" }] // Set in order to simplify prop passage - and even encapsulate data somewhat, idk)
   }
 }
