@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
 export const StyledTemplateWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  background-color: ${(props) => props.theme.colors.background};
   min-height: 100vh;
 
-  background-color: ${(props) => props.theme.colors.background};
-
-  & > * {
-    flex: 1 auto;
-  }
+  display: grid;
+  grid-template-rows: [header] 5em [main] auto [footer] 3.5em;
 `;
 
 export const StyledContentWrapper = styled.section`
-  flex: 100 auto;
-  max-width: 100vw;
+  & > * {
+    padding: 1.5em;
+    min-height: 100%;
+  }
 `;

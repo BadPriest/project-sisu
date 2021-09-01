@@ -12,7 +12,7 @@ export const StyledListWrapper = styled.section`
 `;
 
 export const StyledCard = styled.article`
-  background-color: ${(props) => props.theme.colors.accent};
+  background-color: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.background};
 
   /* background-image: linear-gradient(

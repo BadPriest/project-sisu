@@ -1,20 +1,17 @@
 import styled from "styled-components";
 
 export const StyledHeaderWrapper = styled.header`
-  display: flex;
-  align-items: center;
-
-  margin: 0;
-  margin-top: 32px;
-
   background-color: ${(props) => props.theme.colors.primary};
+  margin-top: 1.5rem;
 `;
 
 export const StyledHeaderTitle = styled.h1`
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.typography.headings.fontFamily};
   font-weight: ${(props) => props.theme.typography.headings.fontWeight};
-  margin: 0;
+
+  font-size: clamp(1rem, 1rem + 10vw, 2.5rem);
+  margin: 0.4rem 1.5rem;
 `;
 
 export const StyledSlogan = styled.span`
@@ -23,5 +20,3 @@ export const StyledSlogan = styled.span`
   font-weight: ${(props) => props.theme.typography.headings.fontWeight};
   margin: 0;
 `;
-
-export default StyledHeaderTitle;
