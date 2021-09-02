@@ -16,5 +16,8 @@
       "fragment": "Fragment",
       "version": "detect"
     }
+  },
+  "rules": {
+    "react-hooks/exhaustive-deps": ["off"]
   }
 }
