@@ -3,16 +3,19 @@ import * as React from "react";
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
 
-import { useSearch } from "../Shared/Hooks/useSearch";
+import { useProcessCollection } from "../Shared/Hooks/useProcessCollection";
 import { useProjectSavingsData } from "./useProjectSavingsData";
 
 import { ListProjects } from "./ListProjects";
-
+import { filterCollection as filterFlattenCollection } from "../Shared/Utils/filterFlattenCollection";
 import { StyledWrapper, SectionHeader, StyledContentWrapper } from "./styles";
 
 export const ProjectSavings = () => {
   const { projects } = useProjectSavingsData();
-  const { Input, inputProps, filteredCollection } = useSearch(projects);
+  const { Input, inputProps, filteredCollection } = useProcessCollection({
+    collection: projects,
+    collectionProcessor: filterFlattenCollection,
+  });
 
   return (
     <StyledWrapper>

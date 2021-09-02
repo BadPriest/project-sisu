@@ -4,7 +4,7 @@ export const StyledListWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
 
-  gap: 8px;
+  gap: 1rem;
 
   & > * {
     flex: 0 1 24%;
@@ -14,6 +14,7 @@ export const StyledListWrapper = styled.section`
 export const StyledCard = styled.article`
   background-color: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.background};
+  padding: 1em;
 
   /* background-image: linear-gradient(
     41deg,
@@ -26,9 +27,9 @@ export const StyledCard = styled.article`
     #ffffff 100%
   );
   background-size: 7.62px 6.63px; */
-
   & > p {
     color: inherit;
+    padding: 0.2em 0;
     /* color: ${(props) => props.theme.colors.background}; */
   }
 `;

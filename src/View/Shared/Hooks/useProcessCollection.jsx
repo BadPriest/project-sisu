@@ -4,14 +4,14 @@ import React, { useCallback } from "react";
 import { Input } from "../Input";
 
 export const useProcessCollection = (options) => {
-  const { collection, filterCollection } = options;
+  const { collection, collectionProcessor } = options;
 
   const [query, setQuery] = React.useState("");
   const [filteredCollection, setFilteredCollection] =
     React.useState(collection);
 
   const handleHasQuery = useCallback(() => {
-    setFilteredCollection(filterCollection(collection, query));
+    setFilteredCollection(collectionProcessor(collection, query));
   }, [query, collection]);
 
   const handleHasNoQuery = useCallback(() => {
