@@ -1,11 +1,6 @@
-import _ from "lodash";
 import React, { useCallback } from "react";
-// import { normalizeString } from "../../../Utils/parseStrings";
-import { Input } from "../Input";
 
-export const useProcessCollection = (options) => {
-  const { collection, collectionProcessor } = options;
-
+export const useSearchCollection = (collection, collectionProcessor) => {
   const [query, setQuery] = React.useState("");
   const [filteredCollection, setFilteredCollection] =
     React.useState(collection);
@@ -30,14 +25,11 @@ export const useProcessCollection = (options) => {
 
   const handleQueryChanged = (evt) => setQuery(evt.target.value);
 
-  const inputProps = {
-    type: "text",
-    name: "search",
-    defaultValue: "",
-    onChange: _.debounce(handleQueryChanged, 300),
+  return {
+    query,
+    setQuery: handleQueryChanged,
+    filteredCollection,
   };
-
-  return { query, Input, inputProps, filteredCollection };
 };
 
-export default useProcessCollection;
+export default useSearchCollection;
