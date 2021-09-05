@@ -18,6 +18,6 @@
     }
   },
   "rules": {
-    "react/jsx-props-no-spreading": ["warn", { "custom": "ignore" }] // Set in order to simplify prop passage - and even encapsulate data somewhat, idk)
+    "react-hooks/exhaustive-deps": ["off"]
   }
 }

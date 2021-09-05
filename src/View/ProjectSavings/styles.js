@@ -9,6 +9,6 @@ export const SectionHeader = styled.header`
   align-items: end;
 `;
 
-export const StyledContentWrapper = styled.main``;
+export const StyledContentWrapper = styled.section``;
 
 export default StyledWrapper;

@@ -1,27 +1,17 @@
 import _ from "lodash";
 import React, { useCallback } from "react";
-import { normalizeString } from "../../../Utils/parseStrings";
+// import { normalizeString } from "../../../Utils/parseStrings";
 import { Input } from "../Input";
 
-export const useSearch = (collection) => {
+export const useProcessCollection = (options) => {
+  const { collection, collectionProcessor } = options;
+
   const [query, setQuery] = React.useState("");
   const [filteredCollection, setFilteredCollection] =
     React.useState(collection);
 
   const handleHasQuery = useCallback(() => {
-    const filtered = collection.filter((item) => {
-      // Naive implementation...
-      // return e.description.includes(query);
-
-      // ...and a much preferred method (searches in all fields)
-      const processedItemValues = normalizeString(
-        JSON.stringify(Object.values(item))
-      );
-
-      return String(processedItemValues).includes(normalizeString(query));
-    });
-
-    setFilteredCollection(filtered);
+    setFilteredCollection(collectionProcessor(collection, query));
   }, [query, collection]);
 
   const handleHasNoQuery = useCallback(() => {
@@ -50,4 +40,4 @@ export const useSearch = (collection) => {
   return { query, Input, inputProps, filteredCollection };
 };
 
-export default useSearch;
+export default useProcessCollection;
