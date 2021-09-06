@@ -6,4 +6,5 @@ export const parseDateForDisplay = (
   formatTo = "DD.MM.YYYY"
 ) => (date ? moment.utc(date, [...formatsAre]).format(formatTo) : "--");
 
-export default parseDateForDisplay;
+export const isValidDate = (value) =>
+  value && moment(value, moment.ISO_8601, true).isValid();
