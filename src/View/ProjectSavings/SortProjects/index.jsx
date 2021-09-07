@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { SortingActionButton } from "../../Shared/SortingActionButton";
+import { SortingButton } from "../../Shared/SortingButton";
 
 import {
   useSortCollection,
@@ -30,12 +30,12 @@ export const SortProjects = ({ projects, updateSort }) => {
 
   return (
     <>
-      <SortingActionButton onClick={() => requestSort("startDate")}>
+      <SortingButton onClick={() => requestSort("startDate")}>
         Sort by Date
-      </SortingActionButton>
-      <SortingActionButton onClick={() => requestSort("savingsAmount")}>
+      </SortingButton>
+      <SortingButton onClick={() => requestSort("savingsAmount")}>
         Sort by Savings Amount
-      </SortingActionButton>
+      </SortingButton>
       {renderSortingIcon()}
     </>
   );
