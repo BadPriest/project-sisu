@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const ResetButton = styled.button`
   border: none;
@@ -19,20 +19,27 @@ const ResetButton = styled.button`
 `;
 
 export const SortingButton = styled(ResetButton)`
-  padding: 0.4em 1.5em;
-  margin: 1em;
-
   cursor: pointer;
+  padding: 0.4em 1.5em;
+  border-radius: 0.8em;
 
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: transparent;
   color: ${(props) => props.theme.colors.text};
-  border-radius: 1em 1em 1em 0;
+  border: 0.1em solid ${(props) => props.theme.colors.text}88;
+
   font-family: ${(props) => props.theme.typography.headings.fontFamily};
+  transition: background-color 300ms ease-out;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.secondary};
-    color: ${(props) => props.theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.primary}66;
+    transition: background-color 400ms ease;
   }
+
+  ${({ isActive, theme }) =>
+    isActive &&
+    css`
+      background-color: ${theme.colors.primary};
+    `}
 `;
 
 export default SortingButton;
