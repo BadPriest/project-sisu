@@ -1,8 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./Core/App";
 import reportWebVitals from "./reportWebVitals";
+
+import { Icons } from "./Assets/Icons";
+
+import App from "./Core/App";
+
+import "./index.css";
+
+Icons.setup();
 
 ReactDOM.render(
   <React.StrictMode>
