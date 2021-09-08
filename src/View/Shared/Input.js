@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { StyledControlsWrapper as ProjectSavingsControlsHeader } from "../ProjectSavings/styles";
 
-export const Input = styled.input`
+export const BaseInput = styled.input`
   display: block;
 
   font-size: 14px;
@@ -16,4 +17,15 @@ export const Input = styled.input`
   background-color: ${({ theme }) => theme.colors.primary}99;
 `;
 
-export default Input;
+// ? Styles variations based on where it's being presented.
+// ? In theory, this can help us to mantain all the styles
+// ? for a given element within a single file/module,
+// ? instead of spreading through the application
+// ! What's the impact on code-bundling when all styles
+// ! are centralized like so?
+export const Input = styled(BaseInput)`
+  ${ProjectSavingsControlsHeader} & {
+    max-height: 4rem;
+    order: 2;
+  }
+`;
