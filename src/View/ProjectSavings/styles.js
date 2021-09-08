@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Container } from "../Shared/Container";
 
-export const StyledWrapper = styled(Container)``;
+export const StyledWrapper = styled.section``;
 
 export const SectionHeader = styled.header`
   display: grid;
@@ -9,6 +8,9 @@ export const SectionHeader = styled.header`
   align-items: end;
 `;
 
-export const StyledContentWrapper = styled.section``;
+export const StyledControlsWrapper = styled.aside`
+  display: grid;
+  grid-template-columns: fit-content(45%) auto;
+`;
 
-export default StyledWrapper;
+export const StyledContentWrapper = styled.section``;

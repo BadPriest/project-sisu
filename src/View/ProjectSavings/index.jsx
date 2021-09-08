@@ -1,15 +1,19 @@
-import * as React from "react";
+import React from "react";
 
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
-
 import { useProjectSavingsData } from "./useProjectSavingsData";
 
 import { SearchProjects } from "./SearchProjects";
 import { SortProjects } from "./SortProjects";
 import { ListProjects } from "./ListProjects";
 
-import { StyledWrapper, SectionHeader, StyledContentWrapper } from "./styles";
+import {
+  StyledWrapper,
+  SectionHeader,
+  StyledContentWrapper,
+  StyledControlsWrapper,
+} from "./styles";
 
 export const ProjectSavings = () => {
   const { projects } = useProjectSavingsData();
@@ -22,20 +26,28 @@ export const ProjectSavings = () => {
     <StyledWrapper>
       <SectionHeader>
         <SectionTitle>Project Savings Data</SectionTitle>
+      </SectionHeader>
+
+      <Separator height="1em" />
+
+      <StyledControlsWrapper>
         {projects && (
           <SearchProjects
             projects={projects}
             updateSearch={setFilteredProjects}
           />
         )}
-      </SectionHeader>
-      <Separator height="2em" />
-      {filteredProjects && (
-        <SortProjects
-          projects={filteredProjects}
-          updateSort={setProcessedProjects}
-        />
-      )}
+
+        {filteredProjects && (
+          <SortProjects
+            projects={filteredProjects}
+            updateSort={setProcessedProjects}
+          />
+        )}
+      </StyledControlsWrapper>
+
+      <Separator height="1em" />
+
       <StyledContentWrapper>
         <ListProjects projects={processedProjects} />
       </StyledContentWrapper>
