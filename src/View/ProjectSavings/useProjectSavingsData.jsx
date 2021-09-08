@@ -16,16 +16,12 @@ export const useProjectSavingsData = () => {
     if (data) {
       setProjects(normalizeProjectSavingsData(data));
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   React.useEffect(() => {
     if (!loading) {
       getProjects();
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { projects, loading, error };

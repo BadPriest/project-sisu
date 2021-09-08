@@ -9,6 +9,8 @@ import {
   SORTING_ORDER,
 } from "../../Shared/Hooks/useSortCollection";
 
+import { StyledWrapper } from "./styles";
+
 const initialSort = getNewSortableConfig("startDate", SORTING_ORDER.ASCENDING);
 
 export const SortProjects = ({ projects, updateSort }) => {
@@ -21,7 +23,7 @@ export const SortProjects = ({ projects, updateSort }) => {
     const hadSortedThis = sortConfig?.key === key;
     const direction = sortConfig?.direction || SORTING_ORDER.ASCENDING;
 
-    return <>{`sorting: ${direction} (hadSorted: ${hadSortedThis})`}</>;
+    return <>{`sorting: ${direction} (${hadSortedThis})`}</>;
   };
 
   React.useEffect(() => {
@@ -29,7 +31,7 @@ export const SortProjects = ({ projects, updateSort }) => {
   }, [sortedCollection, sortConfig, updateSort]);
 
   return (
-    <>
+    <StyledWrapper>
       <SortingButton onClick={() => requestSort("startDate")}>
         Sort by Date
       </SortingButton>
@@ -37,7 +39,7 @@ export const SortProjects = ({ projects, updateSort }) => {
         Sort by Savings Amount
       </SortingButton>
       {renderSortingIcon()}
-    </>
+    </StyledWrapper>
   );
 };
 
