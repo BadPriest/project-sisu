@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
-export const StyledWrapper = styled.div``;
+export const StyledSortControlWrapper = styled.li`
+  display: inline-block;
+`;
 
-export default StyledWrapper;
+export const StyledSortControlsWrapper = styled.ul`
+  padding: 0;
+  list-style-type: none;
+
+  & ${StyledSortControlWrapper} {
+    margin-right: 1em;
+  }
+`;

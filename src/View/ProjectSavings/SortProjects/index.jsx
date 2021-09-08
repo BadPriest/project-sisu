@@ -1,29 +1,54 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { SortingButton } from "../../Shared/SortingButton";
-
 import {
-  useSortCollection,
-  getNewSortableConfig,
   SORTING_ORDER,
+  useSortCollection,
 } from "../../Shared/Hooks/useSortCollection";
 
-import { StyledWrapper } from "./styles";
+import { SortingButton } from "../../Shared/SortingButton";
+import { Icons } from "../../Shared/Icons";
 
-const initialSort = getNewSortableConfig("startDate", SORTING_ORDER.ASCENDING);
+import { StyledSortControlsWrapper, StyledSortControlWrapper } from "./styles";
+import { INITIAL_SORT, SORTING_OPTIONS } from "./constants";
 
 export const SortProjects = ({ projects, updateSort }) => {
   const { sortedCollection, requestSort, sortConfig } = useSortCollection(
     projects,
-    initialSort
+    INITIAL_SORT
   );
 
-  const renderSortingIcon = (key) => {
-    const hadSortedThis = sortConfig?.key === key;
+  const isActive = (key) => sortConfig.key === key;
+
+  const renderSortingIcon = () => {
     const direction = sortConfig?.direction || SORTING_ORDER.ASCENDING;
 
-    return <>{`sorting: ${direction} (${hadSortedThis})`}</>;
+    return (
+      <Icons
+        padLeft
+        icon={
+          direction === SORTING_ORDER.ASCENDING
+            ? "sort-amount-up"
+            : "sort-amount-down-alt"
+        }
+      />
+    );
+  };
+
+  const renderSortingButton = (key, label) => {
+    const currentlyActive = isActive(key);
+
+    return (
+      <StyledSortControlWrapper>
+        <SortingButton
+          isActive={currentlyActive}
+          onClick={() => requestSort(key)}
+        >
+          {label}
+          {currentlyActive && renderSortingIcon(key)}
+        </SortingButton>
+      </StyledSortControlWrapper>
+    );
   };
 
   React.useEffect(() => {
@@ -31,15 +56,9 @@ export const SortProjects = ({ projects, updateSort }) => {
   }, [sortedCollection, sortConfig, updateSort]);
 
   return (
-    <StyledWrapper>
-      <SortingButton onClick={() => requestSort("startDate")}>
-        Sort by Date
-      </SortingButton>
-      <SortingButton onClick={() => requestSort("savingsAmount")}>
-        Sort by Savings Amount
-      </SortingButton>
-      {renderSortingIcon()}
-    </StyledWrapper>
+    <StyledSortControlsWrapper>
+      {SORTING_OPTIONS.map((o) => renderSortingButton(o.key, o.label))}
+    </StyledSortControlsWrapper>
   );
 };
 
