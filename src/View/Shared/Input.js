@@ -12,7 +12,8 @@ export const Input = styled.input`
   border-bottom: solid 0.15rem ${(props) => props.theme.colors.text}99;
   border-radius: 0.1rem;
 
-  background-color: lightgreen;
+  color: ${({ theme }) => theme.colors.text};
+  background-color: ${({ theme }) => theme.colors.primary}99;
 `;
 
 export default Input;
