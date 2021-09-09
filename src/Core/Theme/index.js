@@ -7,7 +7,7 @@ export const Theme = {
     text: "#424242",
     mutedText: "#858585",
     success: "#badd7e",
-    warning: "#fff75c",
+    warning: "#fcca46",
     danger: "#e03616",
   },
   typography: {

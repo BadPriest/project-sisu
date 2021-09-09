@@ -18,6 +18,8 @@ export const Card = styled(BaseCard)`
   padding: 2.5em 1em;
   border-radius: 0.3em;
 
+  font-size: 0.9rem;
+
   overflow: hidden;
   isolation: isolate;
   transition: 0.2s ease;

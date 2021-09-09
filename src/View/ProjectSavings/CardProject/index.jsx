@@ -1,15 +1,24 @@
 import React from "react";
 import { PropTypes } from "prop-types";
+
+import { normalizeString } from "../../../Utils/parseStrings";
+
+import { Separator } from "../../Shared/Separator";
 import { Card } from "../../Shared/Card";
 import { Text } from "../../Shared/Text";
-import { normalizeString } from "../../../Utils/parseStrings";
+
+import { StyledCardHeader } from "./styles";
 
 export const CardProject = ({ project }) => (
   <Card
     key={project.reactKeyProp}
     complexity={normalizeString(project.complexity)}
   >
-    <Text>project: {project.project}</Text>
+    <StyledCardHeader>
+      <Text>Project {project.project}</Text>
+      <Text>{project.category}</Text>
+    </StyledCardHeader>
+    <Separator height="0.8em" />
     <Text>description {project.description}</Text>
     <Text>start date{project.normalized.startDate}</Text>
     <Text>category {project.category}</Text>
