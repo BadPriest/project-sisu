@@ -1,37 +1,11 @@
 import styled from "styled-components";
 
 export const StyledListWrapper = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 1rem;
-
-  & > * {
-    flex: 0 1 24%;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+  margin: 0 auto;
 `;
 
-export const StyledCard = styled.article`
-  background-color: ${(props) => props.theme.colors.secondary};
-  color: ${(props) => props.theme.colors.background};
-  padding: 1em;
-
-  /* background-image: linear-gradient(
-    41deg,
-    #e7ffe0 10%,
-    #ffffff 10%,
-    #ffffff 50%,
-    #e7ffe0 50%,
-    #e7ffe0 60%,
-    #ffffff 60%,
-    #ffffff 100%
-  );
-  background-size: 7.62px 6.63px; */
-  & > p {
-    color: inherit;
-    padding: 0.2em 0;
-    /* color: ${(props) => props.theme.colors.background}; */
-  }
-`;
-
-export default StyledCard;
+export default StyledListWrapper;

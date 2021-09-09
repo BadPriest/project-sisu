@@ -39,7 +39,7 @@ export const SortProjects = ({ projects, updateSort }) => {
     const currentlyActive = isActive(key);
 
     return (
-      <StyledSortControlWrapper>
+      <StyledSortControlWrapper key={key}>
         <SortingButton
           isActive={currentlyActive}
           onClick={() => requestSort(key)}
