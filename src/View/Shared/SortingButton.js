@@ -19,6 +19,7 @@ const ResetButton = styled.button`
 `;
 
 export const SortingButton = styled(ResetButton)`
+  font-size: 0.9rem;
   cursor: pointer;
   padding: 0.4em 1.5em;
   border-radius: 0.8em;
