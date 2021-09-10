@@ -20,19 +20,20 @@ export const SortProjects = ({ projects, updateSort }) => {
 
   const isActive = (key) => sortConfig.key === key;
 
-  const renderSortingIcon = () => {
-    const direction = sortConfig?.direction || SORTING_ORDER.ASCENDING;
+  const renderSortingIcon = (currentlyActive) => {
+    const directionIcon =
+      (sortConfig?.direction || SORTING_ORDER.ASCENDING) ===
+      SORTING_ORDER.ASCENDING
+        ? "caret-up"
+        : "caret-down";
 
-    return (
-      <Icons
-        padLeft
-        icon={
-          direction === SORTING_ORDER.ASCENDING
-            ? "sort-amount-up"
-            : "sort-amount-down-alt"
-        }
-      />
-    );
+    let icon = <Icons padLeft icon="sort" size="lg" />;
+
+    if (currentlyActive) {
+      icon = <Icons padLeft size="lg" icon={directionIcon} />;
+    }
+
+    return icon;
   };
 
   const renderSortingButton = (key, label) => {
@@ -45,7 +46,7 @@ export const SortProjects = ({ projects, updateSort }) => {
           onClick={() => requestSort(key)}
         >
           {label}
-          {currentlyActive && renderSortingIcon(key)}
+          {renderSortingIcon(currentlyActive)}
         </SortingButton>
       </StyledSortControlWrapper>
     );
