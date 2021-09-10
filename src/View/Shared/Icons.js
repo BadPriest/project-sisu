@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const padSize = "0.3em";
+const padSize = "0.5em";
 
 export const Icons = styled(FontAwesomeIcon)`
   ${({ padLeft, padRight }) => css`
