@@ -19,28 +19,37 @@ const ResetButton = styled.button`
 `;
 
 export const SortingButton = styled(ResetButton)`
+  transition: 300ms ease-out;
+
+  font-family: ${(props) => props.theme.typography.body.fontFamily};
   font-size: 0.9rem;
   cursor: pointer;
-  padding: 0.4em 1.5em;
-  border-radius: 0.8em;
 
+  padding: 0.5em 2em;
+
+  color: ${(props) => props.theme.colors.mutedText};
   background-color: transparent;
-  color: ${(props) => props.theme.colors.text};
-  border: 0.1em solid ${(props) => props.theme.colors.text}88;
 
-  font-family: ${(props) => props.theme.typography.headings.fontFamily};
-  transition: background-color 300ms ease-out;
+  border: 0.1em solid ${(props) => props.theme.colors.text}88;
+  border-radius: 0.8em;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary}66;
     transition: background-color 400ms ease;
   }
 
-  ${({ isActive, theme }) =>
-    isActive &&
+  ${({ isActive, theme }) => css`
+    ${isActive &&
     css`
+      color: ${(props) => props.theme.colors.text};
       background-color: ${theme.colors.primary};
     `}
+
+    ${!isActive &&
+    css`
+      color: ${(props) => props.theme.colors.mutedText};
+    `}
+  `}
 `;
 
 export default SortingButton;
