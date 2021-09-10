@@ -1,12 +1,14 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faSortAmountUp,
   faSortAmountDownAlt,
+  faCaretDown,
+  faCaretUp,
+  faSort,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const Icons = {
   setup: () => {
-    library.add(faSortAmountUp, faSortAmountDownAlt);
+    library.add(faSortAmountDownAlt, faCaretUp, faCaretDown, faSort);
   },
 };
 
