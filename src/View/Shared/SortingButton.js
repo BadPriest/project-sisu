@@ -27,8 +27,8 @@ export const SortingButton = styled(ResetButton)`
 
   padding: 0.5em 2em;
 
-  color: ${(props) => props.theme.colors.mutedText};
-  background-color: transparent;
+  color: ${({ theme }) => theme.colors.mutedText};
+  background-color: ${({ theme }) => theme.colors.surface};
 
   border: 0.1em solid ${(props) => props.theme.colors.text}88;
   border-radius: 0.8em;

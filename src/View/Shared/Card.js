@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 const BaseCard = styled.article`
   margin: 0;
   padding: 0;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.surface};
 
   line-height: normal;
 `;

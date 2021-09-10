@@ -14,7 +14,7 @@ export const StyledCardHeader = styled.section`
   & ${Text} {
     font-size: 1rem;
     font-family: ${({ theme }) => theme.typography.headings.fontFamily};
-    color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.surface};
   }
 `;
 

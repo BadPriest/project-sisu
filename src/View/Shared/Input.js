@@ -14,7 +14,7 @@ export const BaseInput = styled.input`
   border-radius: 0.1rem;
 
   color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.primary}99;
+  background-color: ${({ theme }) => theme.colors.surface};
 `;
 
 // ? Styles variations based on where it's being presented.
@@ -26,6 +26,6 @@ export const BaseInput = styled.input`
 export const Input = styled(BaseInput)`
   ${ProjectSavingsControlsHeader} & {
     max-height: 4rem;
-    order: 2;
+    grid-area: search;
   }
 `;
