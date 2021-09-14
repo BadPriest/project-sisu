@@ -26,6 +26,7 @@ export const BaseInput = styled.input`
 export const Input = styled(BaseInput)`
   ${ProjectSavingsControlsHeader} & {
     max-height: 4rem;
+    min-width: 50vw;
     grid-area: search;
   }
 `;
