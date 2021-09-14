@@ -22,6 +22,7 @@ export const SortingButton = styled(ResetButton)`
   transition: 300ms ease-out;
 
   font-family: ${(props) => props.theme.typography.body.fontFamily};
+  font-weight: bold;
   font-size: 0.9rem;
   cursor: pointer;
 
@@ -30,18 +31,20 @@ export const SortingButton = styled(ResetButton)`
   color: ${({ theme }) => theme.colors.mutedText};
   background-color: ${({ theme }) => theme.colors.surface};
 
-  border: 0.1em solid ${(props) => props.theme.colors.text}88;
   border-radius: 0.8em;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primary}66;
-    transition: background-color 400ms ease;
+    box-shadow: 0px 10px 13px -7px #00000066,
+      12px 10px 14px -8px rgba(103, 103, 103, 0);
+
+    transform: translateY(-1px);
+    transition: 400ms ease;
   }
 
   ${({ isActive, theme }) => css`
     ${isActive &&
     css`
-      color: ${(props) => props.theme.colors.text};
+      color: ${(props) => props.theme.colors.surface};
       background-color: ${theme.colors.primary};
     `}
 
