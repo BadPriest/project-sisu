@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Text = styled.p`
-  color: ${(props) => props.theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   line-height: 1em;
-  font-family: ${(props) => props.theme.typography.body.fontFamily};
-  font-weight: ${(props) => props.theme.typography.headings.fontWeight};
+  font-family: ${({ theme }) => theme.typography.body.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.headings.fontWeight};
+  font-size: ${({ theme }) => theme.typography.body.large.fontSize};
   margin: 0;
 `;
 

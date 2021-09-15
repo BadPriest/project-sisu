@@ -6,12 +6,13 @@ const colors = light;
 const typography = {
   headings: {
     fontFamily: "montserratextrabold",
-    h1: { fontSize: "32px", fontWeight: "800" },
+    h1: { fontSize: "2rem", fontWeight: "800" },
   },
   body: {
     fontFamily: "montserratthin",
-    regular: { fontSize: "14px" },
-    large: { fontSize: "18px" },
+    small: { fontSize: "0.7rem" },
+    regular: { fontSize: "1rem" },
+    large: { fontSize: "1.1rem" },
   },
 };
 
