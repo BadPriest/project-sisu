@@ -25,7 +25,7 @@ export const ProjectSavings = () => {
   return (
     <StyledWrapper>
       <SectionHeader>
-        <SectionTitle>Project Savings Data</SectionTitle>
+        <SectionTitle>Project Savings</SectionTitle>
       </SectionHeader>
 
       <Separator height="1em" />
