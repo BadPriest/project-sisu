@@ -1,21 +1,58 @@
-import styled from "styled-components";
-import { Text } from "../../Shared/Text";
+import styled, { css } from "styled-components";
 
-export const StyledCardHeader = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+import { BaseCard } from "../../Shared/Card";
+import { Icons } from "../../Shared/Icons";
 
-  margin-top: -2rem;
+const ASIDE_COLOR_OFFSET = "66";
+
+export const StyledCardHeader = styled.header`
+  text-align: right;
+`;
+
+export const StyledAside = styled.aside`
+  padding: 1em;
+  grid-area: aside;
+
+  ${({ theme, complexity }) => css`
+    ${complexity === "simple" &&
+    css`
+      background-color: ${theme.colors.success}${ASIDE_COLOR_OFFSET};
+      color: ${theme.colors.success};
+    `}
+    ${complexity === "moderate" &&
+    css`
+      background-color: ${theme.colors.warning}${ASIDE_COLOR_OFFSET};
+      color: ${theme.colors.warning};
+    `}
+       ${complexity === "hazardous" &&
+    css`
+      background-color: ${theme.colors.danger}${ASIDE_COLOR_OFFSET};
+      color: ${theme.colors.danger};
+    `}
+  `}
+`;
+
+export const StyledContent = styled.section`
+  margin: 1.2em 1em 0 0;
+  grid-area: content;
 
   overflow: hidden;
   text-overflow: ellipsis;
-
-  & ${Text} {
-    font-size: 1rem;
-    font-family: ${({ theme }) => theme.typography.headings.fontFamily};
-    color: ${({ theme }) => theme.colors.surface};
-  }
 `;
 
-export default StyledCardHeader;
+export const StyledProjectCard = styled(BaseCard)`
+  display: grid;
+  grid-template-columns: 35% auto;
+  grid-template-areas: "aside content";
+
+  min-width: 330px;
+  max-width: 460px;
+
+  gap: 1em;
+`;
+
+export const StyledIconInfoWrapper = styled.span`
+  & > ${Icons} {
+    width: 1em;
+  }
+`;

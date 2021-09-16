@@ -27,6 +27,8 @@ export const SortingButton = styled(ResetButton)`
   font-size: 0.9rem;
   cursor: pointer;
 
+  text-transform: uppercase;
+
   padding: 0.5em 2em;
 
   color: ${({ theme }) => theme.colors.mutedText};
