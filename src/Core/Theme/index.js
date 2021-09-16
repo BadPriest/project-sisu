@@ -26,12 +26,19 @@ const typography = {
   },
 };
 
-export const Theme = { colors, typography };
+const animation = {
+  surface: {
+    transitionTime: "0.2s",
+  },
+};
+
+export const Theme = { colors, typography, animation };
 
 export const useTheme = () => {
   const [theme, setTheme] = React.useState({
     colors,
     typography,
+    animation,
   });
 
   const changeTheme = (newTheme) => {
@@ -42,6 +49,7 @@ export const useTheme = () => {
     setTheme({
       colors,
       typography,
+      animation,
       ...props,
     });
   };
