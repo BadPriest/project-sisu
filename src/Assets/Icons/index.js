@@ -4,11 +4,24 @@ import {
   faCaretDown,
   faCaretUp,
   faSort,
+  faPuzzlePiece,
+  faIdBadge,
+  faSitemap,
+  faCubes,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const Icons = {
   setup: () => {
-    library.add(faSortAmountDownAlt, faCaretUp, faCaretDown, faSort);
+    library.add(
+      faSortAmountDownAlt,
+      faCaretUp,
+      faCaretDown,
+      faSort,
+      faPuzzlePiece,
+      faIdBadge,
+      faSitemap,
+      faCubes
+    );
   },
 };
 
