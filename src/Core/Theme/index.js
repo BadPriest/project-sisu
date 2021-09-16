@@ -28,7 +28,7 @@ const typography = {
 
 const animation = {
   surface: {
-    transitionTime: "0.2s",
+    activationTransition: "0.2s",
   },
 };
 

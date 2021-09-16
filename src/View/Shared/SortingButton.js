@@ -19,7 +19,8 @@ const ResetButton = styled.button`
 `;
 
 export const SortingButton = styled(ResetButton)`
-  transition: 300ms ease-out;
+  transition: ${({ theme }) =>
+    `${theme.animation.surface.activationTransition} ease-out`};
 
   font-family: ${(props) => props.theme.typography.body.fontFamily};
   font-weight: bold;
@@ -38,7 +39,9 @@ export const SortingButton = styled(ResetButton)`
       12px 10px 14px -8px rgba(103, 103, 103, 0);
 
     transform: translateY(-1px);
-    transition: 400ms ease;
+
+    transition: ${({ theme }) =>
+      `${theme.animation.surface.activationTransition} ease-in`};
   }
 
   ${({ isActive, theme }) => css`

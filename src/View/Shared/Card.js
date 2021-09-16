@@ -18,7 +18,9 @@ export const BaseCard = styled(ResetCard)`
   font-size: 0.9rem;
 
   overflow: hidden;
-  transition: 0.2s ease;
+
+  transition: ${({ theme }) =>
+    `${theme.animation.surface.activationTransition} ease-in`};
 
   box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08),
     0 1px 3px 1px rgba(66, 66, 66, 0.16);
@@ -27,6 +29,9 @@ export const BaseCard = styled(ResetCard)`
     transform: scale(1.1);
     box-shadow: 0px 10px 13px -7px #00000066,
       12px 10px 14px -8px rgba(103, 103, 103, 0);
+
+    transition: ${({ theme }) =>
+      `${theme.animation.surface.activationTransition} ease-out`};
   }
 `;
 
