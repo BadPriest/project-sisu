@@ -1,12 +1,22 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Text = styled.p`
-  color: ${({ theme }) => theme.colors.text};
-  line-height: 1em;
+  color: inherit;
   font-family: ${({ theme }) => theme.typography.body.fontFamily};
   font-weight: ${({ theme }) => theme.typography.headings.fontWeight};
-  font-size: ${({ theme }) => theme.typography.body.large.fontSize};
-  margin: 0;
+  font-size: ${({ theme }) => theme.typography.body.regular.fontSize};
+
+  ${({ small, large }) => css`
+    ${small &&
+    css`
+      font-size: ${({ theme }) => theme.typography.body.small.fontSize};
+    `}
+
+    ${large &&
+    css`
+      font-size: ${({ theme }) => theme.typography.body.large.fontSize};
+    `}
+  `}
 `;
 
 export default Text;
