@@ -6,7 +6,7 @@ import { Icons } from "../../Shared/Icons";
 const ASIDE_COLOR_OFFSET = "66";
 
 export const StyledCardHeader = styled.header`
-  text-align: right;
+  text-align: ${(props) => props.align || "start"};
 `;
 
 export const StyledAside = styled.aside`
@@ -52,7 +52,9 @@ export const StyledProjectCard = styled(BaseCard)`
 `;
 
 export const StyledIconInfoWrapper = styled.span`
-  & > ${Icons} {
+  display: flex;
+
+  & ${Icons} {
     width: 1em;
   }
 `;
