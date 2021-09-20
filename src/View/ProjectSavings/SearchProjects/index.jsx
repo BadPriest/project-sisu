@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { useSearchCollection } from "../../Shared/Hooks/useSearchCollection";
-import { Input as SearchInput } from "../../Shared/Input";
 import { filterCollection as filterFlattenCollection } from "../../Shared/Utils/filterFlattenCollection";
+import { InputSearch } from "../../Shared/InputSearch";
 
 export const SearchProjects = ({ projects, updateSearch }) => {
   const { setQuery, filteredCollection } = useSearchCollection(
@@ -16,9 +16,14 @@ export const SearchProjects = ({ projects, updateSearch }) => {
   }, [filteredCollection, setQuery]);
 
   return (
-    <>
-      <SearchInput type="text" name="inputSearch" onChange={setQuery} />
-    </>
+    <InputSearch
+      autoFocus
+      id="inputSearch"
+      name="inputSearch"
+      label="Search"
+      placeholder="Try 'creme fraiche' or 'office supplies'"
+      setQuery={setQuery}
+    />
   );
 };
 
