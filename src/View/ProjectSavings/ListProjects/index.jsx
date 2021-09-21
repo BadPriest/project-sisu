@@ -5,11 +5,15 @@ import { StyledListWrapper } from "./styles";
 import { CardProject } from "../CardProject";
 
 export const ListProjects = ({ projects }) => (
-  <StyledListWrapper>
-    {projects.map((p) => (
-      <CardProject key={p.reactKeyProp} project={p} />
-    ))}
-  </StyledListWrapper>
+  <>
+    {projects?.length && (
+      <StyledListWrapper>
+        {projects.map((p) => (
+          <CardProject key={p.reactKeyProp} project={p} />
+        ))}
+      </StyledListWrapper>
+    )}
+  </>
 );
 
 ListProjects.propTypes = {
