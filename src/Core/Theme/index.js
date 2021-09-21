@@ -3,6 +3,14 @@ import { light } from "./color-presets";
 
 const colors = light;
 
+const common = {
+  borderRadius: {
+    input: "0.1em",
+    card: "0.3em",
+    tags: "0.6em",
+  },
+};
+
 const typography = {
   fontWeights: {
     thin: 300,
@@ -32,7 +40,7 @@ const animation = {
   },
 };
 
-export const Theme = { colors, typography, animation };
+export const Theme = { colors, typography, animation, common };
 
 export const useTheme = () => {
   const [theme, setTheme] = React.useState({
@@ -50,6 +58,7 @@ export const useTheme = () => {
       colors,
       typography,
       animation,
+      common,
       ...props,
     });
   };

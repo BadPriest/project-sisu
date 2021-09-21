@@ -9,6 +9,7 @@ import {
   faSitemap,
   faCubes,
   faSearch,
+  faMeh,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const Icons = {
@@ -22,7 +23,8 @@ export const Icons = {
       faIdBadge,
       faSitemap,
       faCubes,
-      faSearch
+      faSearch,
+      faMeh
     );
   },
 };
