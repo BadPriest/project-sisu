@@ -23,9 +23,14 @@ export const StyledIcons = styled(Icons)`
 export const StyledSearchInput = styled(BaseInput)`
   min-width: 100%;
   margin: auto;
+  padding-right: 1.5em;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.mutedText}cc;
+    font-size: ${({ theme }) => theme.typography.body.regular.fontSize};
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 `;
 
