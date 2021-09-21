@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import _ from "lodash";
 
 export const useSearchCollection = (collection, collectionProcessor) => {
   const [query, setQuery] = React.useState("");
@@ -27,7 +28,7 @@ export const useSearchCollection = (collection, collectionProcessor) => {
 
   return {
     query,
-    setQuery: handleQueryChanged,
+    setQuery: _.debounce(handleQueryChanged, 400),
     filteredCollection,
   };
 };
