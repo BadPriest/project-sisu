@@ -3,6 +3,7 @@ import React from "react";
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
 import { useProjectSavingsData } from "./useProjectSavingsData";
+import { FeedbackNoData } from "../Shared/Feedback/NoDataFeedback";
 
 import { SearchProjects } from "./SearchProjects";
 import { SortProjects } from "./SortProjects";
@@ -49,7 +50,11 @@ export const ProjectSavings = () => {
       <Separator height="1em" />
 
       <StyledContentWrapper>
-        <ListProjects projects={processedProjects} />
+        {processedProjects?.length ? (
+          <ListProjects projects={processedProjects} />
+        ) : (
+          <FeedbackNoData />
+        )}
       </StyledContentWrapper>
     </StyledWrapper>
   );
