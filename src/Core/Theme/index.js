@@ -9,6 +9,10 @@ const common = {
     card: "0.3em",
     tags: "0.6em",
   },
+  opacities: {
+    buttonDisabled: "33",
+    regularOpacity: "66",
+  },
 };
 
 const typography = {

@@ -42,6 +42,7 @@ export const SortProjects = ({ projects, updateSort }) => {
     return (
       <StyledSortControlWrapper key={key}>
         <SortingButton
+          disabled={!projects?.length}
           isActive={currentlyActive}
           onClick={() => requestSort(key)}
         >

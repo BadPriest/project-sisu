@@ -37,13 +37,23 @@ export const SortingButton = styled(ResetButton)`
   border-radius: 0.8em;
 
   &:hover {
-    box-shadow: 0px 10px 13px -7px #00000066,
-      12px 10px 14px -8px rgba(103, 103, 103, 0);
+    &:not(:disabled) {
+      box-shadow: 0px 10px 13px -7px #00000066,
+        12px 10px 14px -8px rgba(103, 103, 103, 0);
 
-    transform: translateY(-1px);
+      transform: translateY(-1px);
 
-    transition: ${({ theme }) =>
-      `${theme.animation.surface.activationTransition} ease-in`};
+      transition: ${({ theme }) =>
+        `${theme.animation.surface.activationTransition} ease-in`};
+    }
+  }
+
+  &:disabled {
+    color: ${({ theme }) =>
+      theme.colors.mutedText + theme.common.opacities.regularOpacity};
+
+    background-color: ${({ theme }) =>
+      theme.colors.mutedText + theme.common.opacities.buttonDisabled};
   }
 
   ${({ isActive, theme }) => css`
