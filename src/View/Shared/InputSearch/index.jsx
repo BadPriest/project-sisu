@@ -2,16 +2,13 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 
-import { Text } from "../Text";
 import { Label } from "../FormControlLabel";
 
 import { StyledWrapper, StyledSearchInput, StyledIcons } from "./styles";
 
 export const InputSearch = ({ id, name, label, placeholder, setQuery }) => (
   <StyledWrapper>
-    <Label htmlFor={id}>
-      <Text small>{label}</Text>
-    </Label>
+    <Label htmlFor={id}>{label}</Label>
     <StyledSearchInput
       type="text"
       id={id}
