@@ -9,8 +9,13 @@ import {
 import { SortingButton } from "../../Shared/SortingButton";
 import { Icons } from "../../Shared/Icons";
 
-import { StyledSortControlsWrapper, StyledSortControlWrapper } from "./styles";
 import { INITIAL_SORT, SORTING_OPTIONS } from "./constants";
+import {
+  StyledSortControlsWrapper,
+  StyledSortControlWrapper,
+  StyledOptionsWrapper,
+  StyledLabel,
+} from "./styles";
 
 export const SortProjects = ({ projects, updateSort }) => {
   const { sortedCollection, requestSort, sortConfig } = useSortCollection(
@@ -59,7 +64,10 @@ export const SortProjects = ({ projects, updateSort }) => {
 
   return (
     <StyledSortControlsWrapper>
-      {SORTING_OPTIONS.map((o) => renderSortingButton(o.key, o.label))}
+      <StyledLabel>Sort by</StyledLabel>
+      <StyledOptionsWrapper>
+        {SORTING_OPTIONS.map((o) => renderSortingButton(o.key, o.label))}
+      </StyledOptionsWrapper>
     </StyledSortControlsWrapper>
   );
 };

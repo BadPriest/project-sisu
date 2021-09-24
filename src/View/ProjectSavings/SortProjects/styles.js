@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Label } from "../../Shared/FormControlLabel";
+
 export const StyledSortControlWrapper = styled.li`
   display: inline-block;
 `;
@@ -9,8 +11,22 @@ const UlReset = styled.ul`
   list-style-type: none;
 `;
 
+export const StyledLabel = styled(Label)`
+  grid-area: label;
+`;
+
+export const StyledOptionsWrapper = styled.div`
+  display: grid;
+  grid-area: sort-tags;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 13em));
+`;
+
 export const StyledSortControlsWrapper = styled(UlReset)`
-  max-width: 100vw;
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  margin: 0;
+
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "label"
+    "sort-tags";
 `;
