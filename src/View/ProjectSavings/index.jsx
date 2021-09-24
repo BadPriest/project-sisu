@@ -29,7 +29,7 @@ export const ProjectSavings = () => {
         <SectionTitle>Project Savings</SectionTitle>
       </SectionHeader>
 
-      <Separator height="1em" />
+      <Separator height="2.5em" />
 
       <StyledControlsWrapper>
         {projects && (
@@ -47,7 +47,7 @@ export const ProjectSavings = () => {
         )}
       </StyledControlsWrapper>
 
-      <Separator height="1em" />
+      <Separator height="2.5em" />
 
       <StyledContentWrapper>
         {processedProjects?.length ? (
