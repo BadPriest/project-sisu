@@ -3,7 +3,7 @@ import React from "react";
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
 import { useProjectSavingsData } from "./useProjectSavingsData";
-import { FeedbackNoData } from "../Shared/Feedback/NoDataFeedback";
+import { FeedbackDataEmpty } from "../Shared/Feedback/DataEmpty";
 
 import { SearchProjects } from "./SearchProjects";
 import { SortProjects } from "./SortProjects";
@@ -19,7 +19,7 @@ import {
 export const ProjectSavings = () => {
   const { projects } = useProjectSavingsData();
 
-  // ? there's got to be a better way ?
+  // ? there's got to be a better way
   const [filteredProjects, setFilteredProjects] = React.useState();
   const [processedProjects, setProcessedProjects] = React.useState();
 
@@ -53,7 +53,7 @@ export const ProjectSavings = () => {
         {processedProjects?.length ? (
           <ListProjects projects={processedProjects} />
         ) : (
-          <FeedbackNoData />
+          <FeedbackDataEmpty />
         )}
       </StyledContentWrapper>
     </StyledWrapper>
