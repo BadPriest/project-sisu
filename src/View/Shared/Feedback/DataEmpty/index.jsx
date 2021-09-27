@@ -11,7 +11,7 @@ import {
   StyledIconText,
 } from "./styles";
 
-export const FeedbackNoData = () => (
+export const FeedbackDataEmpty = () => (
   <StyledWrapper>
     <StyledIconWrapper>
       <Icons icon="meh" size="4x" />
@@ -28,4 +28,4 @@ export const FeedbackNoData = () => (
   </StyledWrapper>
 );
 
-export default FeedbackNoData;
+export default FeedbackDataEmpty;
