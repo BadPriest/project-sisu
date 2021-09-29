@@ -23,6 +23,7 @@ export const SearchProjects = ({ projects, updateSearch }) => {
       label="Search"
       placeholder="Try 'creme fraiche' or 'office supplies'"
       setQuery={setQuery}
+      disabled={!projects?.length}
     />
   );
 };
