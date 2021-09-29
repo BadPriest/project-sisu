@@ -36,6 +36,16 @@ export const StyledSearchInput = styled(BaseInput)`
       font-size: ${({ theme }) => theme.typography.body.regular.fontSize};
     }
   }
+
+  &:disabled {
+    color: ${({ theme }) =>
+      theme.colors.mutedText + theme.common.opacities.regularOpacity};
+
+    background-color: ${({ theme }) =>
+      theme.colors.mutedText + theme.common.opacities.buttonDisabled};
+
+    border-bottom: dashed;
+  }
 `;
 
 export default StyledSearchInput;

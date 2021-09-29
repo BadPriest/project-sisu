@@ -6,7 +6,14 @@ import { Label } from "../FormControlLabel";
 
 import { StyledWrapper, StyledSearchInput, StyledIcons } from "./styles";
 
-export const InputSearch = ({ id, name, label, placeholder, setQuery }) => (
+export const InputSearch = ({
+  id,
+  name,
+  label,
+  placeholder,
+  setQuery,
+  disabled,
+}) => (
   <StyledWrapper>
     <Label htmlFor={id}>{label}</Label>
     <StyledSearchInput
@@ -15,6 +22,7 @@ export const InputSearch = ({ id, name, label, placeholder, setQuery }) => (
       name={name}
       placeholder={placeholder}
       onChange={setQuery}
+      disabled={disabled}
     />
     <StyledIcons icon="search" size="lg" />
   </StyledWrapper>
@@ -26,6 +34,7 @@ InputSearch.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   setQuery: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };
 
 InputSearch.defaultProps = {
@@ -33,6 +42,7 @@ InputSearch.defaultProps = {
   name: "",
   label: "",
   placeholder: "",
+  disabled: false,
 };
 
 export default InputSearch;
