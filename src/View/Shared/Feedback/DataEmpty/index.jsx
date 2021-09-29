@@ -1,31 +1,7 @@
 import React from "react";
 
-import { Icons } from "../../Icons";
-
-import {
-  StyledWrapper,
-  StyledIconWrapper,
-  StyledTextWrapper,
-  StyledTitle,
-  StyledBody,
-  StyledIconText,
-} from "./styles";
-
-export const FeedbackDataEmpty = () => (
-  <StyledWrapper>
-    <StyledIconWrapper>
-      <Icons icon="meh" size="4x" />
-      <StyledIconText>oops!</StyledIconText>
-    </StyledIconWrapper>
-    <StyledTextWrapper>
-      <StyledTitle large>no data found</StyledTitle>
-      <StyledBody large>
-        Current search returned no results.
-        <br />
-        Try another combination.
-      </StyledBody>
-    </StyledTextWrapper>
-  </StyledWrapper>
+export const FeedbackDataEmptyResponse = () => (
+  <>FeedbackDataEmptyResponse Works!</>
 );
 
-export default FeedbackDataEmpty;
+export default FeedbackDataEmptyResponse;
