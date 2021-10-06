@@ -13,7 +13,7 @@ export const useProjectSavingsData = () => {
   const getProjects = async () => get();
 
   React.useEffect(() => {
-    if (data) {
+    if (data?.length && !error && !loading) {
       setProjects(normalizeProjectSavingsData(data));
     }
   }, [data]);
