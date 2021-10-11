@@ -12,7 +12,7 @@ export const DisplayInfoHero = ({ label, value, inline, small }) => (
 
 DisplayInfoHero.propTypes = {
   label: PropTypes.string.isRequired,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   inline: PropTypes.bool,
   small: PropTypes.bool,
 };
