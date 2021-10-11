@@ -52,7 +52,7 @@ export const ProjectSavings = () => {
         <SectionTitle>Project Savings</SectionTitle>
       </SectionHeader>
 
-      <Separator height="2.5em" />
+      <Separator height="2em" />
 
       <StyledControlsWrapper>
         <SearchProjects
