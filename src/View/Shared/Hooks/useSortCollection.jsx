@@ -89,8 +89,13 @@ export const useSortCollection = (collection, config = null) => {
       return;
     }
 
-    const direction = getDirection(key);
-    setSortConfig({ key, direction });
+    if (Object.keys(collection[0]).includes(key)) {
+      const direction = getDirection(key);
+      setSortConfig({ key, direction });
+      return;
+    }
+
+    throw new Error(["[exception] sort error: Key not found!"]);
   };
 
   return { sortedCollection, requestSort, sortConfig };
