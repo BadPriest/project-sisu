@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 
+import { errorCodes } from "../../../Core/Localization/localization-keys.en";
 import { isValidDate } from "../../../Utils/parseDates";
 
 export const SORTING_ORDER = {
@@ -95,7 +96,7 @@ export const useSortCollection = (collection, config = null) => {
       return;
     }
 
-    throw new Error(["[exception] sort error: Key not found!"]);
+    throw new Error(errorCodes.sortErrors.KeyNotFound);
   };
 
   return { sortedCollection, requestSort, sortConfig };
