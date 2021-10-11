@@ -5,7 +5,7 @@ export const StyledTemplateWrapper = styled.div`
   min-height: 100vh;
 
   display: grid;
-  grid-template-rows: [header] 5em [main] auto [footer] 3.5em;
+  grid-template-rows: [header] 5em [main] auto [footer] 8em;
 `;
 
 export const StyledContentWrapper = styled.section`

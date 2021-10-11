@@ -1,7 +1,19 @@
 import React from "react";
 
-import { StyledFooter } from "./styles";
+import { Separator } from "../../../View/Shared/Separator";
 
-export const Footer = () => <StyledFooter>Footer Works!</StyledFooter>;
+import { StyledFooter, StyledInfo, StyledInfoHero } from "./styles";
+
+export const Footer = () => (
+  <StyledFooter>
+    <StyledInfoHero>PROJECT SISU | be excellent</StyledInfoHero>
+    <Separator height="0.2em" />
+    <StyledInfo>Made with care, built to last.</StyledInfo>
+    <Separator height="0.6em" />
+    <StyledInfo>
+      <b>Bruno Vinicius Vergatti, 2021</b>
+    </StyledInfo>
+  </StyledFooter>
+);
 
 export default Footer;
