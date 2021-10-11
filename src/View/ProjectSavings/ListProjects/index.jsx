@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 
 import { StyledListWrapper } from "./styles";
@@ -24,4 +24,4 @@ ListProjects.defaultProps = {
   projects: [],
 };
 
-export default React.memo(ListProjects);
+export default memo(ListProjects);

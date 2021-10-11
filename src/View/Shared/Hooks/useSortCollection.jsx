@@ -1,4 +1,5 @@
-import React from "react";
+import { useMemo, useState } from "react";
+
 import moment from "moment";
 
 import { errorCodes } from "../../../Core/Localization/localization-keys.en";
@@ -15,7 +16,7 @@ export const getNewSortableConfig = (key, direction) => ({
 });
 
 export const useSortCollection = (collection, config = null) => {
-  const [sortConfig, setSortConfig] = React.useState(config);
+  const [sortConfig, setSortConfig] = useState(config);
 
   const compareNumbers = (a, b, direction) =>
     direction === SORTING_ORDER.ASCENDING ? +a - +b : +b - +a;
@@ -52,7 +53,7 @@ export const useSortCollection = (collection, config = null) => {
     return [...collection].sort;
   };
 
-  const sortedCollection = React.useMemo(() => {
+  const sortedCollection = useMemo(() => {
     const sorted = [...collection];
     if (sortConfig !== null && sorted) {
       const { key } = sortConfig;

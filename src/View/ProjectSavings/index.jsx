@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
@@ -22,8 +22,8 @@ export const ProjectSavings = () => {
   const { projects, error, loading } = useProjectSavingsData();
 
   // ? there's got to be a better way
-  const [filteredProjects, setFilteredProjects] = React.useState();
-  const [processedProjects, setProcessedProjects] = React.useState();
+  const [filteredProjects, setFilteredProjects] = useState();
+  const [processedProjects, setProcessedProjects] = useState();
 
   const hasError = !loading && error;
   const hasProjectsAvailable = projects?.length && !hasError;

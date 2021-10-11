@@ -1,10 +1,10 @@
-import React, { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
+
 import _ from "lodash";
 
 export const useSearchCollection = (collection, collectionProcessor) => {
-  const [query, setQuery] = React.useState("");
-  const [filteredCollection, setFilteredCollection] =
-    React.useState(collection);
+  const [query, setQuery] = useState("");
+  const [filteredCollection, setFilteredCollection] = useState(collection);
 
   const handleHasQuery = useCallback(() => {
     setFilteredCollection(collectionProcessor(collection, query));
@@ -14,7 +14,7 @@ export const useSearchCollection = (collection, collectionProcessor) => {
     setFilteredCollection(collection);
   }, [collection]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (query && collection) {
       handleHasQuery();
     }

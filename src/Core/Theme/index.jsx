@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { light } from "./color-presets";
 
 const colors = light;
@@ -47,7 +47,7 @@ const animation = {
 export const Theme = { colors, typography, animation, common };
 
 export const useTheme = () => {
-  const [theme, setTheme] = React.useState({
+  const [theme, setTheme] = useState({
     colors,
     typography,
     animation,

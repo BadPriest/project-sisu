@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import PropTypes from "prop-types";
 
 import { useSearchCollection } from "../../Shared/Hooks/useSearchCollection";
@@ -11,7 +12,7 @@ export const SearchProjects = ({ projects, updateSearch }) => {
     filterFlattenCollection
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     updateSearch(filteredCollection);
   }, [filteredCollection, setQuery]);
 
