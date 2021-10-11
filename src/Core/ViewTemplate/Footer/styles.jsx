@@ -23,4 +23,9 @@ export const StyledInfoHero = styled(StyledInfo)`
   font-size: 2rem;
 `;
 
+export const StyledLink = styled.a`
+  text-decoration: inherit;
+  color: inherit;
+`;
+
 export default StyledFooter;

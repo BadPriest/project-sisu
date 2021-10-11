@@ -1,4 +1,6 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
+
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   faSortAmountDownAlt,
   faCaretDown,
@@ -24,7 +26,8 @@ export const Icons = {
       faSitemap,
       faCubes,
       faSearch,
-      faMeh
+      faMeh,
+      faLinkedin
     );
   },
 };
