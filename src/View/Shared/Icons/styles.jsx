@@ -1,10 +1,15 @@
 import styled, { css } from "styled-components";
+import { padSize } from "./constants";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+export const StyledWrapper = styled.span`
+  display: inline-block;
+  position: relative;
 
-const padSize = "0.5em";
+  && > svg {
+    color: inherit;
+    width: inherit;
+  }
 
-export const Icons = styled(FontAwesomeIcon)`
   ${({ padLeft, padRight }) => css`
     ${padLeft &&
     css`
@@ -15,7 +20,7 @@ export const Icons = styled(FontAwesomeIcon)`
     css`
       margin-right: ${padSize};
     `}
-  `}
+  `};
 `;
 
-export default Icons;
+export default StyledWrapper;
