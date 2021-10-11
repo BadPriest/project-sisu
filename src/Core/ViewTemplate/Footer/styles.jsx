@@ -13,7 +13,6 @@ export const StyledFooter = styled.footer`
 
 export const StyledInfo = styled(Text)`
   margin: 0;
-  /* color: ${({ theme }) => theme.colors.text}; */
   color: ${({ theme }) => theme.colors.surface};
 `;
 
