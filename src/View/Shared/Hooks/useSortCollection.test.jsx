@@ -5,6 +5,7 @@ import {
   SORTING_ORDER,
 } from "./useSortCollection";
 
+import { errorCodes } from "../../../Core/Localization/localization-keys.en";
 import { someCollectionFixture } from "../../../Utils/TestFixtures/constants";
 
 test("Verifies that initial sort works", async () => {
@@ -78,9 +79,16 @@ test("Verifies that sorting property/direction can change", async () => {
 });
 
 test("Verifies that sorting by inexistent prop throws meaningful error", async () => {
+  let actual = "no error yet";
+  const expected = errorCodes.sortErrors.KeyNotFound;
+
   const { result } = renderHook(() => useSortCollection(someCollectionFixture));
 
-  expect(result.current.requestSort("exception")).toThrow(
-    "[exception] sort error: Key not found!"
-  );
+  try {
+    result.current.requestSort("exception");
+  } catch (actualError) {
+    actual = actualError;
+  }
+
+  expect(actual.toString()).toContain(expected);
 });
