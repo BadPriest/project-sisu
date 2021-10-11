@@ -1,23 +1,22 @@
 import styled from "styled-components";
 
 import { BaseInput } from "../Input";
-import { Icons } from "../Icons";
 
 export const StyledWrapper = styled.div`
   grid-area: search;
   position: relative;
-`;
 
-export const StyledIcons = styled(Icons)`
-  position: absolute;
-  display: block;
-  user-select: none;
+  & > span {
+    position: absolute;
+    display: block;
+    user-select: none;
 
-  color: ${({ theme }) => theme.colors.mutedText}66;
-  font-size: 1.8em;
+    color: ${({ theme }) => theme.colors.mutedText}66;
+    font-size: 1.4em;
 
-  right: 0.5em;
-  top: 1.45em;
+    right: 0.5em;
+    top: 1.75em;
+  }
 `;
 
 export const StyledSearchInput = styled(BaseInput)`

@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
 import { BaseCard } from "../../Shared/Card";
-import { Icons } from "../../Shared/Icons";
 
 const ASIDE_COLOR_OFFSET = "66";
 
@@ -53,8 +52,10 @@ export const StyledProjectCard = styled(BaseCard)`
 
 export const StyledIconInfoWrapper = styled.span`
   display: flex;
+  align-items: center;
+  justify-content: start;
 
-  & ${Icons} {
+  & span {
     width: 1em;
   }
 `;

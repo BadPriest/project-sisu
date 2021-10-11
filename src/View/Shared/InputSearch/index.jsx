@@ -2,9 +2,10 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 
+import { Icons } from "../Icons";
 import { Label } from "../FormControlLabel";
 
-import { StyledWrapper, StyledSearchInput, StyledIcons } from "./styles";
+import { StyledWrapper, StyledSearchInput } from "./styles";
 
 export const InputSearch = ({
   id,
@@ -24,7 +25,7 @@ export const InputSearch = ({
       onChange={setQuery}
       disabled={disabled}
     />
-    <StyledIcons icon="search" size="lg" />
+    <Icons icon="search" size="lg" />
   </StyledWrapper>
 );
 
