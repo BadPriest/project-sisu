@@ -33,6 +33,8 @@ export const SortingButton = styled(ResetButton)`
 
   color: ${({ theme }) => theme.colors.mutedText};
   background-color: ${({ theme }) => theme.colors.surface};
+  box-shadow: 0 0 0 0 rgba(66, 66, 66, 0.08),
+    0 3px 3px 1px rgba(66, 66, 66, 0.16);
 
   border-radius: 0.8em;
 
