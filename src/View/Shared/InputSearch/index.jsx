@@ -14,10 +14,12 @@ export const InputSearch = ({
   placeholder,
   setQuery,
   disabled,
+  autoFocus,
 }) => (
   <StyledWrapper>
     <Label htmlFor={id}>{label}</Label>
     <StyledSearchInput
+      autoFocus={autoFocus}
       type="text"
       id={id}
       name={name}
@@ -36,6 +38,7 @@ InputSearch.propTypes = {
   placeholder: PropTypes.string,
   setQuery: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
+  autoFocus: PropTypes.bool,
 };
 
 InputSearch.defaultProps = {
@@ -44,6 +47,7 @@ InputSearch.defaultProps = {
   label: "",
   placeholder: "",
   disabled: false,
+  autoFocus: true,
 };
 
 export default InputSearch;
