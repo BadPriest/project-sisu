@@ -69,7 +69,7 @@ CardProject.propTypes = {
     savingsAmount: PropTypes.number,
     startDate: PropTypes.string,
     responsible: PropTypes.string,
-    normalized: { startDate: PropTypes.string },
+    normalized: PropTypes.shape({ startDate: PropTypes.string }),
     reactKeyProp: PropTypes.number,
   }).isRequired,
 };
