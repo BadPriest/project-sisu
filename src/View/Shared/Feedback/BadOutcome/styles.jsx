@@ -10,7 +10,10 @@ export const StyledWrapper = styled.div`
   grid-template-areas: "icon content";
   gap: 1em;
 
-  max-width: 80%;
+  @media screen and (min-width: 60em) {
+    max-width: 80%;
+  }
+
   margin: auto;
 `;
 
