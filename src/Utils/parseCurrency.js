@@ -1,9 +1,11 @@
 function getCurrencySign(currency) {
-  if (!currency) {
+  const parsedCurrency = currency?.toLowerCase();
+
+  if (!parsedCurrency || !["eur", "usd"].includes(parsedCurrency)) {
     return "";
   }
 
-  return currency.toLowerCase() === "eur" ? "€" : "$";
+  return parsedCurrency === "eur" ? "€" : "$";
 }
 
 export const formatCurrency = (num, currency) =>
