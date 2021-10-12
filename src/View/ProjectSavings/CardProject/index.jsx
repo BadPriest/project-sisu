@@ -60,11 +60,18 @@ export const CardProject = ({ project }) => (
 );
 
 CardProject.propTypes = {
-  project: PropTypes.shape(),
-};
-
-CardProject.defaultProps = {
-  project: {},
+  project: PropTypes.shape({
+    category: PropTypes.string,
+    complexity: PropTypes.string,
+    currency: PropTypes.string,
+    description: PropTypes.string,
+    project: PropTypes.number,
+    savingsAmount: PropTypes.number,
+    startDate: PropTypes.string,
+    responsible: PropTypes.string,
+    normalized: { startDate: PropTypes.string },
+    reactKeyProp: PropTypes.number,
+  }).isRequired,
 };
 
 export default CardProject;
