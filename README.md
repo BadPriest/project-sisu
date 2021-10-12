@@ -3,8 +3,9 @@
 ## Project Sisu | be excellent.
 
 This project is the fulfillment of an assignment for Sievo's recruitment process.
+<br/><br/>
 
-# Summary
+## Summary
 
 - [Features](#features)
 - [Technologies](#technologies)
@@ -13,6 +14,8 @@ This project is the fulfillment of an assignment for Sievo's recruitment process
 - [Install & Run](#install-and-run)
 - [Running Tests](#running-tests)
 - [Author](#author)
+
+<br/>
 
 ## Features
 
@@ -30,6 +33,8 @@ This project is the fulfillment of an assignment for Sievo's recruitment process
 - Wide array of Shared components, hooks and functions built to maximize reusability
 - Theming (app colors and other variables)
 - Responsive design: works well on screens from narrow phones to wide desktops
+
+<br/><br/>
 
 ## Technologies
 
@@ -57,6 +62,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Formatter: [Prettier](https://prettier.io/)
 - Project hooks: [Husky](https://typicode.github.io/husky/#/)
 - Commits: [Commitizen](https://commitizen-tools.github.io/commitizen/)
+
+<br/><br/>
 
 ## Project Structure
 
@@ -92,10 +99,14 @@ project-sisu
 
 ```
 
+<br/>
+
 ## Requirements
 
 - To execute the application you`ll need to download and install [NodeJs](https://nodejs.org/en/download/)
 - To open the zipped folder you may need [7zip](https://www.7-zip.org/)
+
+<br/>
 
 ## Install and Run
 
@@ -110,45 +121,51 @@ https://drive.google.com/drive/folders/1Aw0mL9--qjN5mwrAaYemgmxkXX_hPHRZ?usp=sha
 3. In the root folder, run
 
 ```
-$ npm install
+npm install
 ```
 
 3. Start the application in development mode
 
 ```
-$ npm start
+npm start
 ```
 
 4. To see the app running, open your browser and navigate to [localhost:3000](localhost:3000)
 
+Alternatively, you could build with:
+
 ```
-Alternatively, you could build with `npm run build` and deploy it on your server of choice.
+npm run build
 ```
 
-### Running tests
+and deploy it on your server of choice.
+
+<br/><br/>
+
+## Running tests
 
 To run all tests, go to the root folder and run:
 
 ```
-$ npm run test
+npm run test
 ```
 
 Alternatively, you could pass a filename as the second parameter. That would execute only the files it finds in the given folder.
 
 ```
-$ npm test src\View\Shared\Hooks\useSortCollection.test.jsx
+npm test src\View\Shared\Hooks\useSortCollection.test.jsx
 ```
 
 or even
 
 ```
-$ npm test src\View\Shared\Hooks\*
+npm test src\View\Shared\Hooks\*
 ```
 
-### Author
+<br/>
 
-**Bruno Vinicius Vergatti**
+## Author
+
+**Bruno Vinicius Vergatti** - [LinkedIn](https://www.linkedin.com/in/bruno-vinicius-vergatti-3b631266)
 
 Passionate about knowledge, collaboration, communication and craftsmanship.
-
-[LinkedIn](https://www.linkedin.com/in/bruno-vinicius-vergatti-3b631266)
