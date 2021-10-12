@@ -110,15 +110,13 @@ project-sisu
 
 ## Install and Run
 
-1. Download the zipped project folder at
+1. Download the project and [extract the files](https://www.wikihow.com/Open-7z-Files) 
 
 ```
 https://drive.google.com/drive/folders/1Aw0mL9--qjN5mwrAaYemgmxkXX_hPHRZ?usp=sharing
 ```
 
-2. Unzip the folder, then
-
-3. In the root folder, run
+2. In the root folder, run
 
 ```
 npm install
