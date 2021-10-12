@@ -2,6 +2,7 @@ import React from "react";
 import { PropTypes } from "prop-types";
 
 import { normalizeString } from "../../../Utils/parseStrings";
+import { formatCurrency } from "../../../Utils/parseCurrency";
 
 import { Icons } from "../../Shared/Icons";
 import { Separator } from "../../Shared/Separator";
@@ -52,7 +53,7 @@ export const CardProject = ({ project }) => (
       <DisplayInfo label="description" value={project.description} />
       <DisplayInfo
         label="savings amount"
-        value={project.savingsAmount.toFixed(2)}
+        value={formatCurrency(project.savingsAmount, project.currency)}
       />
     </StyledContent>
   </StyledProjectCard>
