@@ -4,18 +4,16 @@
 
 This project is the fulfillment of an assignment for Sievo's recruitment process.
 
----
-
 # Summary
 
 - [Features](#features)
 - [Technologies](#technologies)
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
-- [Install & Run](#setting-up)
+- [Install & Run](#install-and-run)
 - [Running Tests](#running-tests)
 - [Author](#author)
----
+
 ## Features
 
 - Lists Projects' Savings Data
@@ -31,6 +29,7 @@ This project is the fulfillment of an assignment for Sievo's recruitment process
   - Generalized to work with any given collection
 - Wide array of Shared components, hooks and functions built to maximize reusability
 - Theming (app colors and other variables)
+- Responsive design: works well on screens from narrow phones to wide desktops
 
 ## Technologies
 
@@ -98,7 +97,7 @@ project-sisu
 - To execute the application you`ll need to download and install [NodeJs](https://nodejs.org/en/download/)
 - To open the zipped folder you may need [7zip](https://www.7-zip.org/)
 
-## Install & Run
+## Install and Run
 
 1. Download the zipped project folder at
 
