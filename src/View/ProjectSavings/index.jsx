@@ -2,14 +2,16 @@ import React, { useState } from "react";
 
 import { SectionTitle } from "../Shared/SectionTitle";
 import { Separator } from "../Shared/Separator";
-import { useProjectSavingsData } from "./useProjectSavingsData";
 import { FeedbackSearchEmpty } from "../Shared/Feedback/SearchEmpty";
 import { FeedbackDataEmptyResponse } from "../Shared/Feedback/DataEmpty";
 import { FeedbackDataError } from "../Shared/Feedback/DataError";
+import { FeedbackDataLoading } from "../Shared/Feedback/DataLoading";
 
 import { SearchProjects } from "./SearchProjects";
 import { SortProjects } from "./SortProjects";
 import { ListProjects } from "./ListProjects";
+
+import { useOfflineProjectSavingsData } from "./useOfflineProjectSavingsData";
 
 import {
   StyledWrapper,
@@ -19,7 +21,8 @@ import {
 } from "./styles";
 
 export const ProjectSavings = () => {
-  const { projects, error, loading } = useProjectSavingsData();
+  // const { projects, error, loading } = useProjectSavingsData();
+  const { projects, error, loading } = useOfflineProjectSavingsData();
 
   // ? there's got to be a better way
   const [filteredProjects, setFilteredProjects] = useState();
@@ -47,28 +50,33 @@ export const ProjectSavings = () => {
   };
 
   return (
-    <StyledWrapper>
-      <SectionHeader>
-        <SectionTitle>Project Savings</SectionTitle>
-      </SectionHeader>
+    <>
+      {loading && <FeedbackDataLoading />}
+      {!loading && (
+        <StyledWrapper>
+          <SectionHeader>
+            <SectionTitle>Project Savings</SectionTitle>
+          </SectionHeader>
 
-      <Separator height="2em" />
+          <Separator height="2em" />
 
-      <StyledControlsWrapper>
-        <SearchProjects
-          projects={projects}
-          updateSearch={setFilteredProjects}
-        />
-        <SortProjects
-          projects={filteredProjects}
-          updateSort={setProcessedProjects}
-        />
-      </StyledControlsWrapper>
+          <StyledControlsWrapper>
+            <SearchProjects
+              projects={projects}
+              updateSearch={setFilteredProjects}
+            />
+            <SortProjects
+              projects={filteredProjects}
+              updateSort={setProcessedProjects}
+            />
+          </StyledControlsWrapper>
 
-      <Separator height="2.5em" />
+          <Separator height="2.5em" />
 
-      <StyledContentWrapper>{renderContent()} </StyledContentWrapper>
-    </StyledWrapper>
+          <StyledContentWrapper>{renderContent()} </StyledContentWrapper>
+        </StyledWrapper>
+      )}
+    </>
   );
 };
 
