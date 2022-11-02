@@ -1,9 +1,30 @@
-# SIEVO ASSIGNMENT
+# PROJECT SISU
 
-## Project Sisu | be excellent.
+This project lists fictional Projects' Savings data, allowing the user to search by any field present in the data itself and also to sort by a specific property.
 
-This project is the fulfillment of an assignment for Sievo's recruitment process.
-<br/><br/>
+It is also the fulfillment of an assignment for a fruitful recruitment process.
+
+<br/>
+
+---
+
+<br/>
+
+## SISU (noun):
+
+```
+1. Perseverance, doggedness, stubbornness, grit, stamina, spunk, determination, courage, guts (unwavering strength to keep going when the going gets tough)
+```
+
+### "Voimamme olivat aivan lopussa, mutta jatkoimme pelkällä sisulla."
+
+### _"We were completely exhausted but continued out of pure determination / to spite fate."_
+
+<br/>
+
+---
+
+<br/>
 
 ## Summary
 
@@ -110,7 +131,7 @@ project-sisu
 
 ## Install and Run
 
-1. Download the project and [extract the files](https://www.wikihow.com/Open-7z-Files) 
+1. Download the project and [extract the files](https://www.wikihow.com/Open-7z-Files)
 
 ```
 https://drive.google.com/drive/folders/1Aw0mL9--qjN5mwrAaYemgmxkXX_hPHRZ?usp=sharing
@@ -164,6 +185,6 @@ npm test src\View\Shared\Hooks\*
 
 ## Author
 
-**Bruno Vinicius Vergatti** - [LinkedIn](https://www.linkedin.com/in/bruno-vinicius-vergatti-3b631266)
+**Bruno Vinicius Vergatti** - [LinkedIn](https://www.linkedin.com/in/bruno-vergatti/)
 
 Passionate about knowledge, collaboration, communication and craftsmanship.
